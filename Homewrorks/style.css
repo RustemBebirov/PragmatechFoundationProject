@@ -41,6 +41,8 @@
         border-top: 1px solid rgba(255,255,255,0.3);
         border-bottom: 1px solid rgba(0,0,0,0.1);
     }
+
+    
 }
 .media{
     display: flex;
@@ -63,4 +65,29 @@
 
 .img-right{
     order: 1;
+}
+
+#main {
+    display: flex;
+}
+
+#sidebar{
+    background-color: #f1f1f1;
+    flex: 25%;
+    padding: 20px;
+
+}
+
+#content{
+    flex: 75%;
+    padding: 20px;
+}
+
+
+.ph{
+    background-color:#aaa ;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    padding-right: 0;
 }
