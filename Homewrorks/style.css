@@ -42,3 +42,25 @@
         border-bottom: 1px solid rgba(0,0,0,0.1);
     }
 }
+.media{
+    display: flex;
+    background-color: antiquewhite;
+    padding: 16px;
+    max-width: 500px;
+    border-radius: 3px;
+    margin: 20px;
+
+}
+
+.media-object{
+    width: 100px;
+    margin-right: 16px;
+}
+
+.media-heading{
+    margin: 0 0 8px;
+}
+
+.img-right{
+    order: 1;
+}
