@@ -13,6 +13,8 @@ header{
     
 }
 
+
+
 .logo-container,.nav-links,.cart{
     display: flex;
     
@@ -66,3 +68,23 @@ nav{
     background-color: white;
     margin: 5px;
 }
+
+/*main*/
+main,.box1{
+    background-color: lightcoral;
+    
+}
+.box2{
+    background-color: lightblue;
+}
+
+.box3{
+    background-color: lightgreen;
+}
+main{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+
+}
+
+
