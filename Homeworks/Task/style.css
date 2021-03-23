@@ -70,6 +70,41 @@ nav{
 }
 
 /*main*/
+.box{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #000;
+}
+.box1 img{
+    width:400px ;
+    height: auto;
+    
 
+}
+
+.box2{
+    background: lightgreen;
+}
+
+.box3{
+    background: lightseagreen
+    ;
+}
+
+.box4{
+    background: lightslategray;
+}
+
+.box5{
+    background: lightyellow;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 400px 600px;
+    grid-template-columns: 40% 40% 20%;
+}
 
 
