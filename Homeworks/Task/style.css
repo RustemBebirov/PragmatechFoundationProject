@@ -83,7 +83,8 @@ nav{
 
 .btn{
     border-radius: 1px solid lightblue;
-    margin-top: 5px;
+    margin-top: 10px;
+    background-color: lightgreen;
     padding: 10px 20px;
     color: white;
     
@@ -97,6 +98,8 @@ nav{
 .box1{
     margin: 0 auto;
     text-align: center;
+    font-size: 20px;
+    color: lightgreen;
 }
 
 
@@ -112,6 +115,8 @@ nav{
 .box2{
     margin: 0 auto;
     text-align: center;
+    font-size: 20px;
+    color: lightgreen;
 }
 
 .box2 img{
@@ -149,6 +154,13 @@ nav{
     
 }
 
+.box5 .form h1{
+    color: lightgreen;
+    margin-bottom: 5px;
+}
+
+
+
 /*footer*/
 
 .footer{
@@ -184,10 +196,17 @@ nav{
 
 .box-about {
     margin: auto;
-    text-align: center;
 
     
 }
+
+.box-about div{
+    margin-top: 5px;
+    padding: 5px;
+    color: lightcoral;
+    font-size: 20px;
+}
+ 
 
 
 
