@@ -128,3 +128,15 @@ ul {
     transform: translateY(-5px);
     transition: all 0.5s ease 0s;
 }
+
+.sign {
+    background-color: #ff1616;
+    padding: 12px 25px;
+    border-radius: 35px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(33, 37, 41);
+    align-items: center;
+}
