@@ -21,10 +21,13 @@ img {
     display: block;
     width: 142px;
     height: 46px;
+    margin-right: 20px;
 }
 
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -34,8 +37,23 @@ ul {
     display: flex;
 }
 
+.align-items {
+    align-items: center;
+}
+
 
 /* special styles*/
+
+.py-2 {
+    padding: 20px 0;
+}
+
+.ml-5 {
+    margin-left: 50px;
+}
+
+
+/*header*/
 
 .header-form {
     width: 60%;
@@ -51,6 +69,13 @@ ul {
     outline: none;
 }
 
+::-webkit-input-placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: lowercase;
+}
+
 .header-form-button {
     border: none;
     background: transparent;
@@ -62,11 +87,44 @@ ul {
     cursor: pointer;
 }
 
-.nav-links-left {
+.nav-links {
     display: flex;
+    align-items: center;
 }
 
-.nav-links-left li {
-    flex: 1;
-    justify-content: space-between;
+.nav-link:hover {
+    color: red;
+    transition: all 0.7s ease 0s;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.cart {
+    display: block;
+    position: relative;
+    margin-left: 50px;
+}
+
+.circle-block {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+.cart:hover .circle-block {
+    transform: translateY(-5px);
+    transition: all 0.5s ease 0s;
 }
