@@ -20,7 +20,7 @@
     
     img {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
     /*header*/
     
@@ -425,6 +425,56 @@
         font-weight: 600;
         Line-height: 21.6px;
         color: rgb(255, 255, 255);
+    }
+    
+    .section-3-tittle h2 {
+        font-family: "Work Sans", sans-serif;
+        color: #1A213D;
+        font-size: 36px;
+        display: block;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 14px;
+    }
+    
+    .section-3-tittle p {
+        color: #6B5A5A;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.5;
+    }
+    
+    .properties-tittle img {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .properties-card {
+        margin: 20px 20px;
+        box-shadow: 10px 10px 5px grey;
+    }
+    
+    .properties-tittle {
+        border-bottom: solid #ebeff4;
+    }
+    
+    .properties-footer {
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .properties-footer .contact ul li {
+        display: inline-block;
+    }
+    
+    .properties-footer img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .restaurant-name h3 {
+        display: inline-block;
     }
     
     .mb-15 {
