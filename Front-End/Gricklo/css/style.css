@@ -46,6 +46,10 @@
         -webkit-box-shadow: 0 10px 15px rgb(25 25 25 / 10%);
     }
     
+    .header-area {
+        padding: 20px;
+    }
+    
     .container-fluid {
         width: 100%;
         padding-right: var(--bs-gutter-x, .75rem);
@@ -197,7 +201,7 @@
     
     .search-icon {
         position: absolute;
-        top: 14px;
+        top: 18px;
         left: 25px;
     }
     
@@ -455,7 +459,7 @@
     }
     
     .properties-tittle {
-        border-bottom: solid #ebeff4;
+        border-bottom: 1px solid #ebeff4;
     }
     
     .properties-footer {
@@ -477,8 +481,101 @@
         display: inline-block;
     }
     
+    .restaurant-name img {}
+    
+    .wantToWork-area {
+        border: 1px solid #DEE0E5;
+        border-radius: 5px;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .wantToWork-area h2 {
+        color: #1A213D;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 8px;
+        margin-top: 0;
+    }
+    
+    .wantToWork-area p {
+        font-size: 18px;
+        margin-bottom: 0;
+        color: #000;
+    }
+    
+    .w-padding2 {
+        padding: 30px 50px;
+    }
+    
+    .section-4 {
+        background: #F1F6F9;
+        padding-top: 90px;
+        padding-bottom: 70px;
+    }
+    
+    .section-4-tittle h2 {
+        font-family: "Work Sans", sans-serif;
+        color: #1A213D;
+        font-size: 36px;
+        display: block;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 14px;
+    }
+    
+    .services-icon img {
+        width: 74px;
+        height: 74px;
+        margin-bottom: 14px;
+    }
+    
+    .services-cap h5 a {
+        font-weight: 600;
+        font-size: 24px;
+        color: #1A213D;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        display: block;
+    }
+    
+    .services-cap p {
+        font-weight: 300;
+        color: #6A6063;
+        line-height: 1.6;
+    }
+    
+    .video-icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 1;
+    }
+    
+    .video-icon img {
+        width: 54px;
+        height: 54px;
+    }
+    
+    .mt-100 {
+        margin-top: 100px;
+    }
+    
     .mb-15 {
         margin-bottom: 15px;
+    }
+    
+    .ml-15 {
+        margin-left: 15px;
     }
     
     .mr-15 {
@@ -487,6 +584,10 @@
     
     .mb-80 {
         margin-bottom: 80px;
+    }
+    
+    .mt-25 {
+        margin-top: 25px;
     }
     /*footer*/
     
@@ -500,7 +601,7 @@
     }
     
     .footer-area {
-        padding-top: 80px;
+        padding-top: 50px;
         padding-bottom: 0;
     }
     
@@ -521,6 +622,8 @@
     .footer-tittle-text {
         color: #A4A6AE;
         font-size: 16px;
+        margin-bottom: 18px;
+        line-height: 1.8;
     }
     
     .footer-tittle-2 h4 {
@@ -542,6 +645,10 @@
         border-bottom: 1px solid rgb(164, 166, 174);
     }
     
+    .footer-tittle-2 ul li {
+        margin-bottom: 15px;
+    }
+    
     .footer-tittle-3 h4 {
         font: "Work Sans", sans-serif;
         font-size: 20px;
@@ -561,9 +668,30 @@
         border-bottom: 1px solid rgb(164, 166, 174);
     }
     
-    .form-icon button {}
+    .footer-tittle-3 ul li {
+        margin-bottom: 15px;
+    }
     
-    .footer-form form {}
+    .form-icon {}
+    
+    .form-icon button {
+        background: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        padding: 17px 22px;
+        line-height: 1;
+        border-radius: 0 3px 3px 0;
+    }
+    
+    .form-icon button i {
+        color: #4DB7FE;
+    }
+    
+    .footer-form {}
     
     .form-input {
         width: 100%;
@@ -574,4 +702,28 @@
         background: none;
         color: #A4A6AE;
         outline: none;
+    }
+    
+    .subscribe h4 {
+        color: #ffffff;
+        font-size: 20px;
+        margin-bottom: 30px;
+        font-weight: 400;
+    }
+    
+    .subscribe p {
+        color: #A4A6AE;
+        font-size: 16px;
+    }
+    
+    .footer-border {
+        padding-top: 39px;
+        padding-bottom: 1px;
+    }
+    
+    .footer-copy-right p {
+        color: #A4A6AE;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 2;
     }
