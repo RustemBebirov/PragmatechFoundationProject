@@ -120,6 +120,10 @@
         margin-right: 15px;
     }
     
+    .mr-20 {
+        margin-right: 20px;
+    }
+    
     .mb-45 {
         margin-bottom: 45px;
     }
@@ -240,6 +244,29 @@
         -ms-transition: all .3s ease-out 0s;
         -o-transition: all .3s ease-out 0s;
         transition: all .3s ease-out 0s;
+    }
+    
+    .main-menu ul ul {
+        display: none;
+        background: rgba(26, 33, 61, 0.8);
+    }
+    
+    .main-menu ul ul li {
+        padding: 20px 25px 20px 0;
+        transition: all 0.4s;
+    }
+    
+    .main-menu ul ul li:hover {
+        margin-left: 20px;
+    }
+    
+    .main-menu ul li:hover>ul {
+        display: block;
+        left: 0;
+        top: 90%;
+        position: absolute;
+        width: 170px;
+        margin-top: 10px;
     }
     
     .header-btn {
@@ -404,8 +431,48 @@
         padding-bottom: 90px;
     }
     
-    .location {
+    .section-tittle h2 {
+        font: "Work Sans", sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 50.4px;
+        color: rgb(26, 33, 61);
+    }
+    
+    .location-img {
         position: relative;
+    }
+    
+    .location-img:hover .location-details {
+        visibility: visible;
+    }
+    
+    .location-details {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        visibility: hidden;
+        transition: all 0.1s ease-out 0s;
+    }
+    
+    .location-details h4 a {
+        color: white;
+    }
+    
+    .location-link {
+        font-family: "Work Sans", sans-serif;
+        color: #1A213D;
+        margin-top: 0px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        transition: all 0.4s ease-out 0s;
+    }
+    
+    .location-link:hover {
+        color: #0a58ca;
     }
     
     .section-2 {
@@ -414,11 +481,22 @@
         background: #F1F6F9;
     }
     
+    .cart {
+        overflow: hidden;
+    }
+    
     .cart img {
         border-radius: 10px;
-        overflow: hidden;
         position: relative;
         z-index: 0;
+        transform: scale(1);
+        transition: all .7s ease-out 0s;
+    }
+    
+    .cart img:hover {
+        border-radius: 10px;
+        transform: scale(1.2);
+        transition: all .7s ease-out 0s;
     }
     
     .cart-tittle {
@@ -429,6 +507,10 @@
         font-weight: 600;
         Line-height: 21.6px;
         color: rgb(255, 255, 255);
+    }
+    
+    .blue {
+        color: rgb(77, 183, 254);
     }
     
     .section-3-tittle h2 {
@@ -453,6 +535,60 @@
         height: 15px;
     }
     
+    .img-text {
+        position: absolute;
+        top: 32px;
+        left: 28px;
+        z-index: 2;
+    }
+    
+    .img-text span {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 7px 15px;
+        border-radius: 25px;
+        background: rgba(126, 109, 92, 0.9);
+    }
+    
+    .icon {
+        position: absolute;
+        top: 27px;
+        right: 28px;
+        z-index: 2;
+    }
+    
+    .icon i {
+        color: #fff;
+        width: 34px;
+        line-height: 34px;
+        height: 34px;
+        background: rgba(126, 109, 92, 0.9);
+        border-radius: 50%;
+        cursor: pointer;
+        text-align: center;
+        display: block;
+    }
+    
+    .ratting {
+        position: absolute;
+        top: 219px;
+        z-index: 2;
+        left: 25px;
+    }
+    
+    .ratting ul li {
+        display: inline-block;
+        color: #FF6F00;
+        font-size: 14px;
+    }
+    
+    .ratting ul span {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
     .properties-card {
         margin: 20px 20px;
         box-shadow: 10px 10px 5px grey;
@@ -466,6 +602,7 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        padding: 10px 5px 10px 10px;
     }
     
     .properties-footer .contact ul li {
@@ -477,11 +614,47 @@
         height: 40px;
     }
     
-    .restaurant-name h3 {
-        display: inline-block;
+    .slick-prev {
+        position: absolute;
+        left: 10px;
+        top: -86px;
+        background: none;
+        cursor: pointer;
+        border: 0;
+        outline: none;
     }
     
-    .restaurant-name img {}
+    .slick-next {
+        position: absolute;
+        right: 10px;
+        top: -86px;
+        background: none;
+        cursor: pointer;
+        border: 0;
+        outline: none;
+    }
+    
+    .slick-prev i {
+        font-size: 23px;
+        color: rgba(26, 33, 61, 0.4);
+    }
+    
+    .slick-next i {
+        font-size: 23px;
+        color: rgba(26, 33, 61, 0.4);
+    }
+    
+    .slick-prev i:hover {
+        color: black;
+    }
+    
+    .slick-next i:hover {
+        color: black;
+    }
+    
+    .restaurant-name img {
+        display: inline-block;
+    }
     
     .wantToWork-area {
         border: 1px solid #DEE0E5;
