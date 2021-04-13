@@ -291,7 +291,7 @@ img {
 /*main*/
 
 .hero-bg1 {
-    background-image: url(/img/h1_hero.jpg);
+    background-image: url(../img/h1_hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -938,7 +938,7 @@ img {
 /*listing*/
 
 .bg-listing {
-    background-image: url(/img/h2_hero1.jpg);
+    background-image: url(../img/h2_hero1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 400px;
@@ -974,7 +974,7 @@ img {
     padding: 30px 19px 30px 30px;
 }
 
-.category-listing .container {
+.container-label {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -985,11 +985,9 @@ img {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    color: #666666;
-    font-size: 16px;
 }
 
-.category-listing .container input {
+.container-label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -997,14 +995,43 @@ img {
     width: 0;
 }
 
-.category-listing .checkmark {
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
-    height: 22px;
-    width: 22px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+.container-label:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container-label input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container-label input:checked~.checkmark:after {
+    display: block;
+}
+
+.container-label .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .select-item {
