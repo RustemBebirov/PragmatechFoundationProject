@@ -327,19 +327,23 @@ img {
 
 .location-img {
     position: relative;
+    overflow: hidden;
 }
 
 .border {
-    width: 200px;
-    height: 200px;
+    width: 95%;
+    height: 95%;
     border: 2px dashed white;
     border-radius: 50%;
     position: absolute;
     margin: auto;
     opacity: 0;
     transition: transform 10s ease-out 0s;
-    top: 2px;
-    right: 2px;
+    overflow: hidden;
+    bottom: 0px;
+    top: 0px;
+    right: 0px;
+    left: 0px;
 }
 
 .location-img:hover .location-details {
