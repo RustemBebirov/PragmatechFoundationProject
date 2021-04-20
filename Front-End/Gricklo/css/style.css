@@ -329,8 +329,28 @@ img {
     position: relative;
 }
 
+.border {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed white;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    opacity: 0;
+    transition: transform 10s ease-out 0s;
+    top: 2px;
+    right: 2px;
+}
+
 .location-img:hover .location-details {
     visibility: visible;
+    transition: all 0.4s ease-out 0s;
+}
+
+.location-img:hover .border {
+    opacity: 1;
+    transform: rotate(90deg);
+    transition: transform 10s ease-out 0s;
 }
 
 .location-details {
@@ -340,7 +360,7 @@ img {
     left: 0;
     right: 0;
     visibility: hidden;
-    transition: all 0.1s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
 }
 
 .location-details h4 a {
@@ -538,7 +558,7 @@ img {
     height: 40px;
 }
 
-.slick-prev {
+.prev {
     position: absolute;
     left: 10px;
     top: -86px;
@@ -548,7 +568,7 @@ img {
     outline: none;
 }
 
-.slick-next {
+.next {
     position: absolute;
     right: 10px;
     top: -86px;
@@ -558,21 +578,21 @@ img {
     outline: none;
 }
 
-.slick-prev i {
+.prev i {
     font-size: 23px;
     color: rgba(26, 33, 61, 0.4);
 }
 
-.slick-next i {
+.next i {
     font-size: 23px;
     color: rgba(26, 33, 61, 0.4);
 }
 
-.slick-prev i:hover {
+.prev i:hover {
     color: black;
 }
 
-.slick-next i:hover {
+.next i:hover {
     color: black;
 }
 
