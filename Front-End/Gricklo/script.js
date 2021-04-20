@@ -1,5 +1,5 @@
 let images = document.querySelectorAll('.properties-card');
-let start = 0;
+let start = 4;
 
 images[start].style.display = 'block';
 
@@ -41,3 +41,8 @@ const moveSlider = () => {
 setInterval(() => {
     moveSlider();
 }, 3000);
+
+let slider2 = document.querySelectorAll('.video-about');
+let begin = 1
+slider2[1].style.display = 'none'
+slider2[2].style.display = 'none'
