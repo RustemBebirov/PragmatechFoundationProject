@@ -128,15 +128,103 @@
     margin-bottom: 30px;
 }
 
-.side-post-cart {
+.side-post-body {
     display: flex;
     margin-bottom: 20px;
 }
 
-.side-post-cart-img img {
+.side-post-img img {
     width: 80px;
     height: 80px;
     margin-right: 20px;
+}
+
+.side-post-text a {
+    color: #2d2d2d;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 6px;
+    transition: all 0.3s linear;
+}
+
+.side-post-text a:hover {
+    color: #4DB7FE;
+}
+
+.tag-clouds {
+    background: #fbf9ff;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.tag-clouds-body ul li {
+    display: inline-block;
+}
+
+.tag-clouds-body ul li a {
+    display: inline-block;
+    border: 1px solid #eeeeee;
+    background: #fff;
+    padding: 4px 20px;
+    margin-bottom: 8px;
+    margin-right: 3px;
+    transition: all 0.3s ease 0s;
+    color: #888888;
+    font-size: 13px;
+}
+
+.tag-clouds-body ul li a:hover {
+    background-color: #4DB7FE;
+    color: white;
+}
+
+.tag-clouds-link {
+    border: 1px solid white;
+}
+
+.News-subscribe {
+    background: #fbf9ff;
+    padding: 30px;
+}
+
+.News-subscribe h2 {
+    border-bottom: 1px solid #2d2d2d;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    width: 95%;
+    color: #2d2d2d;
+}
+
+.News-subscribe-input input {
+    width: 95%;
+    height: 50px;
+    border-color: #f0e9ff;
+    font-size: 13px;
+    color: #999999;
+    padding-left: 20px;
+    border-radius: 0;
+    outline: none;
+}
+
+.News-subscribe-input button {
+    width: 95%;
+    background: #fff;
+    padding: 18px 44px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #4DB7FE;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #4DB7FE;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.News-subscribe-input button:hover {
+    background-color: #4DB7FE;
+    color: white;
 }
 
 .instagram-feeds {
