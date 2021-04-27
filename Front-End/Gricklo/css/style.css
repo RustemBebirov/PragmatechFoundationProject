@@ -708,13 +708,13 @@ img {
 .video-about-text {
     background: #F1F6F9;
     border-radius: 5px;
-    padding: 30px 100px 30px 40px;
+    padding: 20px 20px;
     line-height: 1.5;
     margin-bottom: 32px;
     font-size: 20px;
     color: #1A213D;
     font-weight: 400;
-    position: relative;
+    display: block;
 }
 
 .video-about-reivew span {
@@ -732,11 +732,28 @@ img {
     margin-right: 15px;
 }
 
-.User-info {
+.user-info {
     color: #68696E;
     font-weight: 400;
     line-height: 1.5;
     margin-bottom: 0;
+}
+
+.slider-block-2 {
+    width: 575px;
+    height: auto;
+    overflow: hidden;
+}
+
+.slider-line-2 {
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.video-about {
+    width: 575px;
 }
 
 

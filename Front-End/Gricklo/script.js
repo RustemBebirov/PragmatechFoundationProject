@@ -13,9 +13,22 @@ document.querySelector('.next').addEventListener('click', () => {
 document.querySelector('.prev').addEventListener('click', () => {
     move -= 480;
     if (move < 0) {
-        move = 1900
+        move = 1920
     }
 
     sliderLine.style.left = -move + 'px'
 
 })
+
+
+function autoplay(params) {
+    let sliderLine2 = document.querySelector('.slider-line-2');
+    sliderLine2.style.left = -575 + 'px'
+
+
+
+}
+
+setTimeout(() => {
+    autoplay()
+}, 1000);
