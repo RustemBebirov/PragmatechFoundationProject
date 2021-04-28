@@ -39,4 +39,5 @@ window.addEventListener('scroll', () => {
     } else {
         document.querySelector('.main-header').classList.remove('sticky-bar')
     }
+
 })

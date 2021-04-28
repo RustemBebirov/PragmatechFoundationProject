@@ -30,6 +30,10 @@
     margin-bottom: 16px;
 }
 
+.properties-card {
+    margin: 20px 20px;
+}
+
 .category-listing {
     border: 1px solid #ededed;
     padding: 30px 19px 30px 30px;
