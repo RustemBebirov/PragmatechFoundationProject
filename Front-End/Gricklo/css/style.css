@@ -35,6 +35,22 @@ img {
     z-index: 1;
 }
 
+.sticky-bar {
+    background: rgba(26, 33, 61, 0.8);
+    padding: 15px 100px;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-box-shadow: 0 10px 15px rgb(25 25 25 / 10%);
+    box-shadow: 0 10px 15px rgb(25 25 25 / 10%);
+    z-index: 9999;
+    -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    -webkit-box-shadow: 0 10px 15px rgb(25 25 25 / 10%);
+}
+
 .form-box {
     position: relative;
     width: 323px;
@@ -740,7 +756,7 @@ img {
 }
 
 .slider-block-2 {
-    width: 575px;
+    max-width: 575px;
     height: auto;
     overflow: hidden;
 }

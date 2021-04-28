@@ -32,3 +32,11 @@ function autoplay(params) {
 setTimeout(() => {
     autoplay()
 }, 1000);
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > window.innerHeight / 4 - document.querySelector('header').clientHeight) {
+        document.querySelector('.main-header').classList.add('sticky-bar')
+    } else {
+        document.querySelector('.main-header').classList.remove('sticky-bar')
+    }
+})
