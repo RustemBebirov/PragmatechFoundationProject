@@ -57,8 +57,11 @@ setInterval(() => {
 window.addEventListener('scroll', () => {
     if (window.scrollY > window.innerHeight / 4 - document.querySelector('header').clientHeight) {
         document.querySelector('.main-header').classList.add('sticky-bar')
+        document.querySelector('nav').style.background = 'rgba(26, 33, 61, 0.8)'
     } else {
         document.querySelector('.main-header').classList.remove('sticky-bar')
+        document.querySelector('nav').style.background = ''
+
     }
 
 })
@@ -102,11 +105,13 @@ document.querySelector('.smooth').addEventListener('click', (e) => {
 
 //resposive nav
 
-document.querySelector('.burger').addEventListener('click', (e) => {
+document.querySelector('.burger').addEventListener('click', () => {
     let nav = document.querySelector('nav')
     if (nav.style.display == 'none') {
         nav.style.display = 'block'
     } else {
         nav.style.display = 'none'
     }
+
+
 })
