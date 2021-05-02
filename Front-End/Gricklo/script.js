@@ -105,13 +105,26 @@ document.querySelector('.smooth').addEventListener('click', (e) => {
 
 //resposive nav
 
-document.querySelector('.burger').addEventListener('click', () => {
-    let nav = document.querySelector('nav')
-    if (nav.style.display == 'none') {
-        nav.style.display = 'block'
-    } else {
-        nav.style.display = 'none'
-    }
+const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav li')
 
 
-})
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active')
+
+        navLinks.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.4s ease forwards ${index/7 +0.3}s`;
+            }
+
+        });
+        burger.classList.toggle('toggle');
+    })
+
+}
+
+navSlide();
