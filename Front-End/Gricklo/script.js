@@ -1,9 +1,10 @@
 let move = 0;
+let move1 = 0;
 let sliderLine = document.querySelector('.slider-line');
 
 document.querySelector('.next').addEventListener('click', () => {
     move += 480;
-    if (move >= 1920) {
+    if (move >= 1930) {
         move = 0
 
     }
@@ -20,16 +21,35 @@ document.querySelector('.prev').addEventListener('click', () => {
 
 })
 
+function auto() {
+    move += 474;
+    if (move >= 1930) {
+        move = 0
+
+    }
+    sliderLine.style.left = -move + 'px';
+
+}
+
+setInterval(() => {
+    auto()
+}, 2000);
+
 
 function autoplay(params) {
     let sliderLine2 = document.querySelector('.slider-line-2');
-    sliderLine2.style.left = -575 + 'px'
+    move1 += 480;
+    if (move1 > 1240) {
+        move1 = 0
+    }
+
+    sliderLine2.style.left = -move1 + 'px'
 
 }
 
 setInterval(() => {
     autoplay()
-}, 1000);
+}, 2000);
 
 
 window.addEventListener('scroll', () => {
@@ -42,9 +62,13 @@ window.addEventListener('scroll', () => {
 })
 
 
+
+
+// back to top scroll
 let div = document.createElement('div');
 div.setAttribute('id', 'back-top');
 div.style.display = 'none'
+div.style.zIndex = 1;
 
 
 let a = document.createElement('a');
@@ -72,4 +96,15 @@ document.querySelector('.smooth').addEventListener('click', (e) => {
     document.querySelector('header').scrollIntoView({
         behavior: 'smooth'
     });
+})
+
+//resposive nav
+
+document.querySelector('.burger').addEventListener('click', (e) => {
+    let nav = document.querySelector('nav')
+    if (nav.style.display == 'none') {
+        nav.style.display = 'block'
+    } else {
+        nav.style.display = 'none'
+    }
 })
