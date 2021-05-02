@@ -149,3 +149,10 @@ https://preview.colorlib.com/theme/gricklo/index.html
   </li>
 
 </ul>
+<h2>index.html
+</h2>
+<ul>
+  <li>Responsive design
+  </li>
+
+</ul>
