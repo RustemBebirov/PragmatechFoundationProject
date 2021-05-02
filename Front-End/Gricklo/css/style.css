@@ -257,10 +257,11 @@ img {
         padding: 0 100px !important;
     }
     .search-form {
-        width: 7% !important;
+        width: 100% !important;
     }
     .slider-area form.search-box .input-form {
-        width: 45% !important;
+        width: 100% !important;
+        margin-bottom: 10px;
     }
     .slider-area form.search-box .input-form input {
         padding-left: 65px !important;
@@ -288,6 +289,9 @@ img {
         margin-bottom: 10px;
     }
     /*section-3*/
+    .properties-card {
+        min-height: 430px;
+    }
     .wantToWork-area h2 {
         font-size: 18px !important;
     }
@@ -317,6 +321,9 @@ img {
     .section-5 .row {
         flex-wrap: wrap;
     }
+    .video-area {
+        margin-left: 15px;
+    }
     /*footer*/
     .footer-area .row {
         flex-direction: column;
@@ -324,6 +331,7 @@ img {
     .footer-area .col-2 {
         width: 100%;
         text-align: center;
+        margin-bottom: 10px;
     }
     .footer-area .col-2 li {
         padding: 0 10px;
@@ -719,13 +727,14 @@ img {
     min-width: 430px;
     border-radius: 10px;
     margin: 0 20px;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 0px 6px 6px 0px rgb(2 25 65 / 8%);
 }
 
 .slider-block {
     position: relative;
     width: 1900px;
     height: 500px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -940,6 +949,7 @@ img {
 .slider-block-2 {
     width: 1240px !important;
     height: auto;
+    margin: 0 auto;
     overflow: hidden;
 }
 

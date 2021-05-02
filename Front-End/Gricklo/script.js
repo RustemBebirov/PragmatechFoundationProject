@@ -3,7 +3,7 @@ let move1 = 0;
 let sliderLine = document.querySelector('.slider-line');
 
 document.querySelector('.next').addEventListener('click', () => {
-    move += 480;
+    move += 474;
     if (move >= 1930) {
         move = 0
 
@@ -21,17 +21,19 @@ document.querySelector('.prev').addEventListener('click', () => {
 
 })
 
-function auto() {
+function auto(e) {
     move += 474;
     if (move >= 1930) {
         move = 0
 
     }
+
     sliderLine.style.left = -move + 'px';
 
 }
 
 setInterval(() => {
+
     auto()
 }, 2000);
 
