@@ -132,16 +132,29 @@
 #     a=a*-1  
 #     print(a)
 
-#home work 12
+#home work 13
 
-a=27
-b=10
-d=2.7
-float(d)
-print(d)
+name=input('adinizi daxil edin')
 
-c=a/b
+if(3<=len(name)<=11):
+    surename=input('soyadinizi daxil edin')
+    if(5<=len(surename)<=15):
+        birthOfYear=input('doguldugunuz ili daxil edin')
+        if(len(birthOfYear)<=4):
+            mail=input('mailinizi daxil edin')
+            if(10<len(mail)<22 and ('@gmail.com' in mail)):
+                password1=input('parolunuzu daxil edin')
+                if(6<len(password1)<13):
+                    password2=input('parolunuzu tesdiqleyin')
+                    if(password1==password2):
+                        print('qeydiyyat tamamlandi')
+                        detallar=input('qeydiyat detallarina baxmaq isteyirsiniz (he ve yaxud yox qeyd edin)')
+                        if(detallar=='he'):
+                            print(f'AD:{name} Soyad:{surename} Yas:{birthOfYear} Email:{mail} parol:{password1}')
+                        elif(detallar=='yox'):
+                            print(f'{name} {surename} ,Ugurlar')
 
-print(f'{float(c)} tam ve {c} qaliq')
+
+
 
 
