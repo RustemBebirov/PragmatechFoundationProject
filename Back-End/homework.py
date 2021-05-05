@@ -31,10 +31,10 @@
 # print(z)
 
 # home work5
-y='4.92'
-z=float(y)
-d=int(z)
-print(d)
+# y='4.92'
+# z=float(y)
+# d=int(z)
+# print(d)
 
 
 
