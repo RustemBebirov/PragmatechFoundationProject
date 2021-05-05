@@ -4,7 +4,7 @@
 
 # search=input('melumat daxil edin')
 
-# if search in db or 'what' in search or 'when' in search or 'where' :
+# if search in db or 'what' in search or 'when' in search or 'where' in search :
 #     if 'when' in search or 'born' in search:
 #         cavab=input('Maybe did you mean “When was Plato born? yes or not')
 #         if cavab=='yes':
