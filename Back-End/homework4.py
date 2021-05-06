@@ -37,9 +37,12 @@
 
 
 
-#home work 5
+
+# #home work 5
 # a=[1, 2, 3, 4, 5, 6, 7, 8, 9]
-# 
+# b=list()
 # for i in a:
-#     if i % 2 ==0 :
-#         print(i)
+#     if i % 2 == 0 :
+#         b.append(i)
+
+# print(b)
