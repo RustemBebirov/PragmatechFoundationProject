@@ -46,3 +46,26 @@
 #         b.append(i)
 
 # print(b)
+
+# home work 4
+# def lastElement(a):
+#     if a:
+#         x=a[len(a)-1]
+#         return x
+
+#     else:
+#         print('none')
+
+
+# def showEmployee(name,salary=9000):
+#     print(f'Ad:{name} Mebleg:{salary}')
+    
+
+
+#  showEmployee(name="rustem",)  ????????????
+
+
+
+
+
+        
