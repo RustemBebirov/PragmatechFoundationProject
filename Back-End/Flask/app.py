@@ -5,9 +5,22 @@ app=Flask(__name__)
 
 def home():
 
-    sayi = 10
+    
 
-    return render_template('index.html',number = sayi)
+    return "Home Page"
+
+@app.route("/register")
+
+def register():
+
+    return "Register"
+
+
+@app.route("/login/<user>")
+
+def login(user):
+
+    return f"Hello:{user}"
 
 
 if __name__ == "__main__":
