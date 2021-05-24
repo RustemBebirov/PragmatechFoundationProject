@@ -20,7 +20,7 @@ def register():
 
 def color(color):
 
-    return f"<h1 style='color:{color};'>A Blue Heading</h1>"
+    return f"<body style='background-color:{color};'> </body>"
 
 
 if __name__ == "__main__":
