@@ -1,0 +1,42 @@
+1. Virtual environment muxtelif proyektlerde isleyerken yuklediyimiz paketleri 
+idare etmek  Gelecekde bas vere bilecek problemleri aradan qaldirmaq ucun 
+istifade edirik. 
+
+Yukeleme qaydasi py -m venv .env (bura istediyimiz adi verebilerik)
+proyekte her daxil olanda aktiv elemk lazimdir. 
+
+aktiv etmek ucun ./.env/Scripts/Activate
+
+2.Framework muxtelif programistlerin,muxtelif dillerde yazdigi kitabxanalardir.
+Bu kitabxanalar hem suretli,hemde tehlukesiz olur.
+
+Bizim yaratdigimiz her bir python projekti bir modul sayilir.
+
+bunlari isletmek ucun import dan istifade edirik
+
+3. Flask dinamik web layihleri yaratmaq ve idare etmek ucun istifade etdiyimiz
+paket ve ya modullarin daxil oldugu bir kitabxanadir.
+
+flaski qurmaq ucun pip install flask yaziriq terminala
+
+sonra yaradacagimiz proyekte daxil olub from flask import Flask 
+
+app=Flask(__name__) yaradiriq
+
+
+@app.route(“/”) ile dinamik sehifeleri yaradiriq / sonra ise adresi yaziriq misal
+ucun /about, /login
+
+
+def index():
+return “” funksiya ile sehifemizde gostereceklerimizi return edirik
+
+
+
+if “__name__”==”__main__”:
+
+app.run(debug=True)
+
+debug True ile sehifemizde bas vere bilecek xetalari qabaqcadan gormek ucun istifade
+edirik. Islerimiz qutardiqdan sonra ise bunu baglamaq lazimdirki kimse qiraqdan
+mudaxile etmesin.

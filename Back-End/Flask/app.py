@@ -23,6 +23,10 @@ def color(color):
     return f"<body style='background-color:{color};'> </body>"
 
 
+
+
+
+
 if __name__ == "__main__":
 
     app.run(debug=True)
