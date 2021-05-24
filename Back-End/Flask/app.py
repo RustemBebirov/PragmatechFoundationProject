@@ -16,11 +16,11 @@ def register():
     return "Register"
 
 
-@app.route("/login/<user>")
+@app.route("/<color>")
 
-def login(user):
+def color(color):
 
-    return f"Hello:{user}"
+    return f"<h1 style='color:{color};'>A Blue Heading</h1>"
 
 
 if __name__ == "__main__":
