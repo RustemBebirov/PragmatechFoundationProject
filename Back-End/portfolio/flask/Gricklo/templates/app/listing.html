@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/listing.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header class="">
+        <div class="header-area">
+            <div class="main-header">
+                <div class="container">
+                    <div class="row d-flex">
+                        <div class="col-9 d-flex align-items-center">
+                            <div class="logo">
+                                <a href="/" class="header-logo">
+                                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+                                </a>
+                            </div>
+
+                            <form action="" class="form-box">
+                                <input type="text" name="Search" placeholder="Search">
+                                <div class="search-icon">
+                                    <a href=""><i class="fas fa-search"></i></a>
+
+                                </div>
+
+
+                            </form>
+                            <div class="main-menu">
+
+                                <nav>
+                                    <ul class="nav d-flex">
+                                        <li><a href="/" class="nav-link">Home</a></li>
+                                        <li>
+                                            <a href="listing" class="nav-link">Listing
+                                                <i class="fas fa-angle-down"></i>
+                                            </a>
+                                            <ul>
+                                                <li><a href="listing">Listing</a></li>
+                                                <li><a href="">Listing Details</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li><a href="about" class="nav-link">About</a></li>
+                                        <li><a href="blog" class="nav-link">Blog</a>
+                                            <ul>
+                                                <li><a href="blog">Blog</a></li>
+                                                <li><a href="blogdetails">Blog Details</a></li>
+                                                <li><a href="">Element</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact" class="nav-link">Contact</a></li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="col-3 ">
+
+                            <div class="nav-button">
+                                <a href="login" class="header-btn mr-15">Sign In</a>
+                                <a href="" class="btn header-btn2">Add Listing</a>
+                                <div class="burger ml-10">
+                                    <div class="line1"></div>
+                                    <div class="line2"></div>
+                                    <div class="line3"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="bg-listing d-flex align-items-center justify-content hero-overly">
+            <div class="listing-text ">
+                <h2>Listings</h2>
+            </div>
+        </div>
+
+        <div class="listin-area section-padding">
+
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="small-tittle mb-25">
+                                    <h4>Filter</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-listing mb-50">
+
+                            <div class="single-listing">
+                                <div class="select-item">
+                                    <select name="select" id="">
+                                        <option value="">City</option>
+                                        <option value="">Dhaka</option>
+                                        <option value="">India</option>
+                                        <option value="">UK</option>
+                                        <option value="">US</option>
+                                        <option value="">Pakistan</option>
+                                    </select>
+                                </div>
+                                <div class="select-item">
+                                    <select name="select" id="">
+                                        <option value="">State</option>
+                                        <option value="">Dhaka</option>
+                                        <option value="">Mirpur</option>
+                                        <option value="">Danmondi</option>
+                                        <option value="">Rampura</option>
+                                        <option value="">Htizill</option>
+                                    </select>
+                                </div>
+                                <div class="select-item">
+                                    <select name="select" id="">
+                                        <option value="">Near 1 Km</option>
+                                        <option value="">2 Km</option>
+                                        <option value="">3 Km</option>
+                                        <option value="">4 Km</option>
+                                        <option value="">5 Km</option>
+                                        <option value="">6 Km</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="small-tittle2 mb-15">
+                                <h4>Price range</h4>
+                            </div>
+                            <form>
+                                <input type="checkbox" id="50-150" name="" value="">
+                                <label for="50-150"> $50 - $150
+                                </label>
+                                <input type="checkbox" id="150-300" name="" value="">
+                                <label for="150-300"> $150 - $300
+                                </label>
+                                <input type="checkbox" id="300-500" name="" value="">
+                                <label for="300-500"> $300 - $500
+                                </label>
+                                <input type="checkbox" id="500-1000" name="" value="">
+                                <label for="500-1000"> $500 - $100
+                                </label>
+                                <input type="checkbox" id="1000" name="" value="">
+                                <label for="1000"> $1000-Above
+                                </label>
+                            </form>
+
+
+                            <div class="select-Categories">
+                                <div class="small-tittle-2">
+                                    <h4>Tags</h4>
+                                </div>
+                                <input type="checkbox" id="WirelessInternet" name="" value="">
+                                <label for="WirelessInternet">Wireless Internet
+                                </label>
+                                <input type="checkbox" id="AcceptsCreditCards" name="" value="">
+                                <label for="AcceptsCreditCards">Accepts Credit Cards
+                                </label>
+                                <input type="checkbox" id="SmokingAllowed" name="" value="">
+                                <label for="SmokingAllowed">Smoking Allowed
+                                </label>
+                                <input type="checkbox" id="Coupons" name="" value="">
+                                <label for="Coupons">Coupons
+                                </label>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="listing-tittle ml-20 ">
+                                    <h2>5432 Listings are available</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-6">
+                                <div class="properties-card positon-r">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='img/directory1.jpg') }}" alt="">
+                                    </a>
+                                    <div class="img-text">
+                                        <span>Closed</span>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="ratting">
+                                        <ul>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><span> - 4.90 (230 Reiew)</span></li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="properties-tittle ml-15 ">
+                                        <h3>
+                                            <a href="#">Gloria Fast Food Restaurant</a>
+                                            <img src="{{ url_for('static', filename='img/varified.png') }} " alt="">
+                                        </h3>
+                                        <p>
+                                            <i class="fas fa-map-marker-alt blue">
+                                                    75 Prince Street, green road, NY, USAk
+                                            </i>
+                                        </p>
+                                    </div>
+                                    <div class="properties-footer d-flex">
+                                        <div class="restaurant-name">
+                                            <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }}" alt="">
+                                        </div>
+                                        <h3>
+                                            <a href="#">Food & Restaurant</a>
+                                        </h3>
+                                        <div class="contact">
+                                            <ul>
+                                                <li><a href=""><i class="fas fa-phone-alt mr-15"></i></a></li>
+                                                <li>
+                                                    <a href=""><i class="far fa-envelope mr-15"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-6">
+                                <div class="properties-card positon-r">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='img/directory2.jpg') }}" alt="">
+                                    </a>
+                                    <div class="img-text">
+                                        <span>Closed</span>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="ratting">
+                                        <ul>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><span> - 4.90 (230 Reiew)</span></li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="properties-tittle ml-15 ">
+                                        <h3>
+                                            <a href="#">Gloria Fast Food Restaurant</a>
+                                            <img src="{{ url_for('static', filename='img/varified.png') }} " alt="">
+                                        </h3>
+                                        <p>
+                                            <i class="fas fa-map-marker-alt blue">
+                                                75 Prince Street, green road, NY, USAk
+                                        </i>
+                                        </p>
+                                    </div>
+                                    <div class="properties-footer d-flex">
+                                        <div class="restaurant-name">
+                                            <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }}" alt="">
+                                        </div>
+                                        <h3>
+                                            <a href="#">Food & Restaurant</a>
+                                        </h3>
+                                        <div class="contact">
+                                            <ul>
+                                                <li><a href=""><i class="fas fa-phone-alt mr-15"></i></a></li>
+                                                <li>
+                                                    <a href=""><i class="far fa-envelope mr-15"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-6">
+                                <div class="properties-card positon-r">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='img/directory3.jpg') }}" alt="">
+                                    </a>
+                                    <div class="img-text">
+                                        <span>Closed</span>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="ratting">
+                                        <ul>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><span> - 4.90 (230 Reiew)</span></li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="properties-tittle ml-15 ">
+                                        <h3>
+                                            <a href="#">Gloria Fast Food Restaurant</a>
+                                            <img src="{{ url_for('static', filename='img/varified.png') }} " alt="">
+                                        </h3>
+                                        <p>
+                                            <i class="fas fa-map-marker-alt blue">
+                                                    75 Prince Street, green road, NY, USAk
+                                            </i>
+                                        </p>
+                                    </div>
+                                    <div class="properties-footer d-flex">
+                                        <div class="restaurant-name">
+                                            <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }}" alt="">
+                                        </div>
+                                        <h3>
+                                            <a href="#">Food & Restaurant</a>
+                                        </h3>
+                                        <div class="contact">
+                                            <ul>
+                                                <li><a href=""><i class="fas fa-phone-alt mr-15"></i></a></li>
+                                                <li>
+                                                    <a href=""><i class="far fa-envelope mr-15"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-6">
+                                <div class="properties-card positon-r">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='img/directory4.jpg') }}" alt="">
+                                    </a>
+                                    <div class="img-text">
+                                        <span>Closed</span>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="ratting">
+                                        <ul>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><span> - 4.90 (230 Reiew)</span></li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="properties-tittle ml-15 ">
+                                        <h3>
+                                            <a href="#">Gloria Fast Food Restaurant</a>
+                                            <img src="{{ url_for('static', filename='img/varified.png') }} " alt="">
+                                        </h3>
+                                        <p>
+                                            <i class="fas fa-map-marker-alt blue">
+                                                75 Prince Street, green road, NY, USAk
+                                        </i>
+                                        </p>
+                                    </div>
+                                    <div class="properties-footer d-flex">
+                                        <div class="restaurant-name">
+                                            <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }}" alt="">
+                                        </div>
+                                        <h3>
+                                            <a href="#">Food & Restaurant</a>
+                                        </h3>
+                                        <div class="contact">
+                                            <ul>
+                                                <li><a href=""><i class="fas fa-phone-alt mr-15"></i></a></li>
+                                                <li>
+                                                    <a href=""><i class="far fa-envelope mr-15"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-6">
+                                <div class="properties-card positon-r">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='img/directory1.jpg') }}" alt="">
+                                    </a>
+                                    <div class="img-text">
+                                        <span>Closed</span>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="ratting">
+                                        <ul>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><span> - 4.90 (230 Reiew)</span></li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="properties-tittle ml-15 ">
+                                        <h3>
+                                            <a href="#">Gloria Fast Food Restaurant</a>
+                                            <img src="{{ url_for('static', filename='img/varified.png ') }}" alt="">
+                                        </h3>
+                                        <p>
+                                            <i class="fas fa-map-marker-alt blue">
+                                                    75 Prince Street, green road, NY, USAk
+                                            </i>
+                                        </p>
+                                    </div>
+                                    <div class="properties-footer d-flex">
+                                        <div class="restaurant-name">
+                                            <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }}" alt="">
+                                        </div>
+                                        <h3>
+                                            <a href="#">Food & Restaurant</a>
+                                        </h3>
+                                        <div class="contact">
+                                            <ul>
+                                                <li><a href=""><i class="fas fa-phone-alt mr-15"></i></a></li>
+                                                <li>
+                                                    <a href=""><i class="far fa-envelope mr-15"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-6">
+                                <div class="properties-card positon-r">
+                                    <a href="">
+                                        <img src="{{ url_for('static', filename='img/directory2.jpg') }}" alt="">
+                                    </a>
+                                    <div class="img-text">
+                                        <span>Closed</span>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="far fa-heart"></i>
+                                    </div>
+                                    <div class="ratting">
+                                        <ul>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><span> - 4.90 (230 Reiew)</span></li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="properties-tittle ml-15 ">
+                                        <h3>
+                                            <a href="#">Gloria Fast Food Restaurant</a>
+                                            <img src="{{ url_for('static', filename='img/varified.png') }} " alt="">
+                                        </h3>
+                                        <p>
+                                            <i class="fas fa-map-marker-alt blue">
+                                                75 Prince Street, green road, NY, USAk
+                                        </i>
+                                        </p>
+                                    </div>
+                                    <div class="properties-footer d-flex">
+                                        <div class="restaurant-name">
+                                            <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }}" alt="">
+                                        </div>
+                                        <h3>
+                                            <a href="#">Food & Restaurant</a>
+                                        </h3>
+                                        <div class="contact">
+                                            <ul>
+                                                <li><a href=""><i class="fas fa-phone-alt mr-15"></i></a></li>
+                                                <li>
+                                                    <a href=""><i class="far fa-envelope mr-15"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-area pt-10">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="single-wrap d-flex justify-content pt-10">
+                                            <nav aria-label="Page navigation example">
+                                                <ul class="pagination d-flex">
+                                                    <li class="page-item">
+                                                        <a href="" class="page-link">
+                                                            <i class="fas fa-angle-left"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li><a href="" class="page-link">01</a></li>
+                                                    <li><a href="" class="page-link">02</a></li>
+                                                    <li><a href="" class="page-link">03</a></li>
+                                                    <li>
+                                                        <a href="" class="page-link">
+                                                            <i class="fas fa-angle-right"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </main>
+
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-area">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <div class="footer-logo mb-35 mt-25">
+                                <a href="#">
+                                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="footer-logo">
+                                </a>
+                            </div>
+                            <div class="footer-tittle">
+                                <p class="footer-tittle-text">Seddo eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Conse <br> ctetur pisicin elit, sed do eiusmod tempor.</p>
+                            </div>
+                            <div class="footer-social">
+                                <a href="">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-2">
+                            <div class="footer-tittle-2">
+                                <h4>Navigation</h4>
+                                <ul>
+                                    <li><a href="">Home</a></li>
+                                    <li><a href="">About</a></li>
+                                    <li><a href="">Services</a></li>
+                                    <li><a href="">Blog</a></li>
+                                    <li><a href="">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="footer-tittle-3">
+                                <h4>Services</h4>
+                                <ul>
+                                    <li><a href="">Care</a></li>
+                                    <li><a href="">Treatment</a></li>
+                                    <li><a href="">Trainingl</a></li>
+                                    <li><a href="">Hygienic Care</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="footer-tittle-4">
+                                <div class="subscribe">
+                                    <h4>Subscribe newsletter</h4>
+                                    <p>Subscribe our newsletter to get updates about our services and offers.</p>
+                                </div>
+                                <div class="footer-form positon-r mb-15">
+                                    <form action="">
+                                        <input type="email" name="EMAIL" placeholder="Enter your email" class="form-input">
+                                    </form>
+                                    <div class="form-icon">
+                                        <button type="submit">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-area text-center ">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="footer-copy-right">
+                                    <p>
+                                        Copyright ©2021 All rights reserved | This template is made with
+                                        <i class="fa fa-heart color-danger" aria-hidden="true"></i>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
