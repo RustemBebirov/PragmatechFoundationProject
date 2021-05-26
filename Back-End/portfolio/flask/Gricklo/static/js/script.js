@@ -21,7 +21,7 @@ document.querySelector('.prev').addEventListener('click', () => {
 
 })
 
-function auto() {
+function auto(e) {
     move += 474;
     if (move >= 1930) {
         move = 0
@@ -41,7 +41,7 @@ setInterval(() => {
 function autoplay(params) {
     let sliderLine2 = document.querySelector('.slider-line-2');
     move1 += 480;
-    if (move1 > 1440) {
+    if (move1 > 1240) {
         move1 = 0
     }
 
@@ -103,7 +103,7 @@ document.querySelector('.smooth').addEventListener('click', (e) => {
     });
 })
 
-//responsive nav
+//resposive nav
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');

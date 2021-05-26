@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="stylesheet" href="{{url_for('static',filename='css/register.css')}}">
 </head>
 
 <body>
@@ -44,9 +41,9 @@
                     </div>
                     <div class="login-footer d-flex justify-content-between">
                         <p>
-                            Already have an account? <a href="login">Login</a> here
+                            Already have an account? <a href="{{ url_for('login') }}">Login</a> here
                         </p>
-                        <button class="btn-3">Sign Up</button>
+                        <button class="btn-3">Register</button>
                     </div>
                 </div>
 

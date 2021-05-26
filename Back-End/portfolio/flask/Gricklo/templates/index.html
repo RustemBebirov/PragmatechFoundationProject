@@ -6,88 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gricklo</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
-    <header class="">
-        <div class="header-area">
-            <div class="main-header">
-                <div class="container">
-                    <div class="row d-flex">
-                        <div class="col-9 d-flex align-items-center">
-                            <div class="logo">
-                                <a href="/" class="header-logo">
-                                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
-                                </a>
-                            </div>
-
-                            <form action="" class="form-box">
-                                <input type="text" name="Search" placeholder="Search">
-                                <div class="search-icon">
-                                    <a href=""><i class="fas fa-search"></i></a>
-
-                                </div>
-
-
-                            </form>
-                            <div class="main-menu">
-
-                                <nav>
-                                    <ul class="nav d-flex">
-                                        <li><a href="/" class="nav-link">Home</a></li>
-                                        <li>
-                                            <a href="listing" class="nav-link">Listing
-                                                <i class="fas fa-angle-down"></i>
-                                            </a>
-                                            <ul>
-                                                <li><a href="listing">Listing</a></li>
-                                                <li><a href="">Listing Details</a></li>
-                                            </ul>
-
-                                        </li>
-                                        <li><a href="about" class="nav-link">About</a></li>
-                                        <li><a href="blog" class="nav-link">Blog</a>
-                                            <ul>
-                                                <li><a href="blog">Blog</a></li>
-                                                <li><a href="blogdetails">Blog Details</a></li>
-                                                <li><a href="">Element</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact" class="nav-link">Contact</a></li>
-                                    </ul>
-                                </nav>
-
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="col-3 ">
-
-                            <div class="nav-button">
-                                <a href="login" class="header-btn mr-15">Sign In</a>
-                                <a href="" class="btn header-btn2">Add Listing</a>
-                                <div class="burger ml-10">
-                                    <div class="line1"></div>
-                                    <div class="line2"></div>
-                                    <div class="line3"></div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        </div>
-
-    </header>
+    {% extends "layout.html" %}
+    {% block content %}
     <main>
         <div class="slider-area hero-bg1 ">
             <div class="single-slinder hero-overly slinder-height1 d-flex align-items-center">
@@ -143,7 +66,7 @@
                         <div class="location text-center mb-35">
                             <div class="location-img">
                                 <div class="border"></div>
-                                <img src="{{ url_for('static', filename='img/topDesti1.png') }}" alt="New York">
+                                <img src="img/topDesti1.png" alt="New York">
                                 <div class="location-details">
 
                                     <a href="#">
@@ -163,7 +86,7 @@
                         <div class="location text-center mb-35">
                             <div class="location-img">
                                 <div class="border"></div>
-                                <img src="{{ url_for('static', filename='img/topDesti2.png') }}"alt="Toronto">
+                                <img src="img/topDesti2.png" alt="Toronto">
                                 <div class="location-details">
 
                                     <a href="#">
@@ -183,7 +106,7 @@
                         <div class="location text-center mb-35">
                             <div class="location-img">
                                 <div class="border"></div>
-                                <img src="{{ url_for('static', filename='img/topDesti3.png') }}" alt="Thailand">
+                                <img src="img/topDesti3.png" alt="Thailand">
                                 <div class="location-details">
 
                                     <a href="#">
@@ -203,7 +126,7 @@
                         <div class="location text-center mb-35">
                             <div class="location-img">
                                 <div class="border"></div>
-                                <img src="{{ url_for('static', filename='img/topDesti4.png') }}" alt="Paris">
+                                <img src="img/topDesti4.png" alt="Paris">
                                 <div class="location-details">
 
                                     <a href="#">
@@ -223,7 +146,7 @@
                         <div class="location text-center mb-35">
                             <div class="location-img">
                                 <div class="border"></div>
-                                <img src="{{ url_for('static', filename='img/topDesti5.png') }}" alt="Dhaka">
+                                <img src="img/topDesti5.png" alt="Dhaka">
                                 <div class="location-details">
 
                                     <a href="#">
@@ -243,7 +166,7 @@
                         <div class="location text-center mb-35">
                             <div class="location-img">
                                 <div class="border"></div>
-                                <img src="{{ url_for('static', filename='img/topDesti6.png') }}" alt="Rome">
+                                <img src="img/topDesti6.png" alt="Rome">
                                 <div class="location-details">
 
                                     <a href="#">
@@ -279,13 +202,13 @@
 
                     <div class="col-4">
                         <div class="cart positon-r mb-15 mr-15">
-                            <img src="{{ url_for('static', filename='img/home-blog1.jpg') }}" alt="">
+                            <img src="img/home-blog1.jpg" alt="">
                             <div class="cart-tittle ">
                                 <h4>Restaurant & Bar</h4>
                             </div>
                         </div>
                         <div class="cart positon-r mr-15">
-                            <img src="{{ url_for('static', filename='img/home-blog2.jpg') }}" alt="">
+                            <img src="img/home-blog2.jpg" alt="">
                             <div class="cart-tittle">
                                 <h4>Outdoor</h4>
                             </div>
@@ -294,7 +217,7 @@
                     </div>
                     <div class="col-4">
                         <div class="cart positon-r mr-15">
-                            <img src="{{ url_for('static', filename='img/home-blog3.jpg') }}" alt="">
+                            <img src="img/home-blog3.jpg" alt="">
                             <div class="cart-tittle">
                                 <h4>Shopping Center</h4>
                                 <p>Discover & connect with great local businesses in New York</p>
@@ -304,13 +227,13 @@
                     <div class="col-4">
 
                         <div class="cart positon-r mb-15 mr-15">
-                            <img src="{{ url_for('static', filename='img/home-blog4.jpg') }}" alt="">
+                            <img src="img/home-blog4.jpg" alt="">
                             <div class="cart-tittle ">
                                 <h4>Restaurant & Bar</h4>
                             </div>
                         </div>
                         <div class="cart positon-r mr-15">
-                            <img src="{{ url_for('static', filename='img/home-blog5.jpg') }}" alt="">
+                            <img src="img/home-blog5.jpg" alt="">
                             <div class="cart-tittle">
                                 <h4>Outdoor</h4>
                             </div>
@@ -346,7 +269,7 @@
                             <div class="properties-card positon-r">
                                 <div class="properties-img">
                                     <a href="">
-                                        <img src="{{ url_for('static', filename='img/directory1.jpg') }}" alt="">
+                                        <img src="img/directory1.jpg" alt="">
                                     </a>
                                     <div class="img-text">
                                         <span>Closed</span>
@@ -369,7 +292,7 @@
                                 <div class="properties-tittle ml-15 ">
                                     <h3>
                                         <a href="#">Gloria Fast Food Restaurant</a>
-                                        <img src="{{ url_for('static', filename='img/varified.png') }} " alt="">
+                                        <img src="img/varified.png " alt="">
                                     </h3>
                                     <p>
                                         <i class="fas fa-map-marker-alt blue">
@@ -379,7 +302,7 @@
                                 </div>
                                 <div class="properties-footer d-flex">
                                     <div class="restaurant-name">
-                                        <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }} " alt="">
+                                        <img src="img/restaurant-icon.svg" alt="">
                                     </div>
                                     <h3>
                                         <a href="#">Food & Restaurant</a>
@@ -399,7 +322,7 @@
                             <div class="properties-card positon-r">
                                 <div class="properties-img">
                                     <a href="">
-                                        <img src="{{ url_for('static', filename='img/directory4.jpg') }}" alt="">
+                                        <img src="img/directory4.jpg" alt="">
                                     </a>
                                     <div class="img-text">
                                         <span>Closed</span>
@@ -423,7 +346,7 @@
                                 <div class="properties-tittle ml-15 ">
                                     <h3>
                                         <a href="#">Gloria Fast Food Restaurant</a>
-                                        <img src="{{ url_for('static', filename='img/varified.png') }}" alt="">
+                                        <img src="img/varified.png " alt="">
                                     </h3>
                                     <p>
                                         <i class="fas fa-map-marker-alt blue">
@@ -433,7 +356,7 @@
                                 </div>
                                 <div class="properties-footer d-flex">
                                     <div class="restaurant-name">
-                                        <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }} " alt="">
+                                        <img src="img/restaurant-icon.svg" alt="">
                                     </div>
                                     <h3>
                                         <a href="#">Food & Restaurant</a>
@@ -453,7 +376,7 @@
                             <div class="properties-card positon-r">
                                 <div class="properties-img">
                                     <a href="">
-                                        <img src="{{ url_for('static', filename='img/directory2.jpg') }}" alt="">
+                                        <img src="img/directory2.jpg" alt="">
                                     </a>
                                     <div class="img-text">
                                         <span>Closed</span>
@@ -478,7 +401,7 @@
                                 <div class="properties-tittle ml-15 ">
                                     <h3>
                                         <a href="#">Gloria Fast Food Restaurant</a>
-                                        <img src="{{ url_for('static', filename='img/varified.png') }}" alt="">
+                                        <img src="img/varified.png " alt="">
                                     </h3>
                                     <p>
                                         <i class="fas fa-map-marker-alt blue">
@@ -488,7 +411,7 @@
                                 </div>
                                 <div class="properties-footer d-flex">
                                     <div class="restaurant-name">
-                                        <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }} " alt="">
+                                        <img src="img/restaurant-icon.svg" alt="">
                                     </div>
                                     <h3>
                                         <a href="#">Food & Restaurant</a>
@@ -508,7 +431,7 @@
                             <div class="properties-card positon-r">
                                 <div class="properties-img">
                                     <a href="">
-                                        <img src="{{ url_for('static', filename='img/directory3.jpg') }}" alt="">
+                                        <img src="img/directory3.jpg" alt="">
                                     </a>
                                     <div class="img-text">
                                         <span>Closed</span>
@@ -533,7 +456,7 @@
                                 <div class="properties-tittle ml-15 ">
                                     <h3>
                                         <a href="#">Gloria Fast Food Restaurant</a>
-                                        <img src="{{ url_for('static', filename='img/varified.png') }}" alt="">
+                                        <img src="img/varified.png " alt="">
                                     </h3>
                                     <p>
                                         <i class="fas fa-map-marker-alt blue">
@@ -543,7 +466,7 @@
                                 </div>
                                 <div class="properties-footer d-flex">
                                     <div class="restaurant-name">
-                                        <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }} " alt="">
+                                        <img src="img/restaurant-icon.svg" alt="">
                                     </div>
                                     <h3>
                                         <a href="#">Food & Restaurant</a>
@@ -561,7 +484,7 @@
                             <div class="properties-card positon-r">
                                 <div class="properties-img">
                                     <a href="">
-                                        <img src="{{ url_for('static', filename='img/directory4.jpg') }}" alt="">
+                                        <img src="img/directory4.jpg" alt="">
                                     </a>
                                     <div class="img-text">
                                         <span>Closed</span>
@@ -586,7 +509,7 @@
                                 <div class="properties-tittle ml-15 ">
                                     <h3>
                                         <a href="#">Gloria Fast Food Restaurant</a>
-                                        <img src="{{ url_for('static', filename='img/varified.png') }}" alt="">
+                                        <img src="img/varified.png " alt="">
                                     </h3>
                                     <p>
                                         <i class="fas fa-map-marker-alt blue">
@@ -596,7 +519,7 @@
                                 </div>
                                 <div class="properties-footer d-flex">
                                     <div class="restaurant-name">
-                                        <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }} " alt="">
+                                        <img src="img/restaurant-icon.svg" alt="">
                                     </div>
                                     <h3>
                                         <a href="#">Food & Restaurant</a>
@@ -614,7 +537,7 @@
                             <div class="properties-card positon-r">
                                 <div class="properties-img">
                                     <a href="">
-                                        <img src="{{ url_for('static', filename='img/directory1.jpg') }}" alt="">
+                                        <img src="img/directory1.jpg" alt="">
                                     </a>
                                     <div class="img-text">
                                         <span>Closed</span>
@@ -639,7 +562,7 @@
                                 <div class="properties-tittle ml-15 ">
                                     <h3>
                                         <a href="#">Gloria Fast Food Restaurant</a>
-                                        <img src="{{ url_for('static', filename='img/varified.png') }}" alt="">
+                                        <img src="img/varified.png " alt="">
                                     </h3>
                                     <p>
                                         <i class="fas fa-map-marker-alt blue">
@@ -649,7 +572,7 @@
                                 </div>
                                 <div class="properties-footer d-flex">
                                     <div class="restaurant-name">
-                                        <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }} " alt="">
+                                        <img src="img/restaurant-icon.svg" alt="">
                                     </div>
                                     <h3>
                                         <a href="#">Food & Restaurant</a>
@@ -667,7 +590,7 @@
                             <div class="properties-card positon-r">
                                 <div class="properties-img">
                                     <a href="">
-                                        <img src="{{ url_for('static', filename='img/directory3.jpg') }}" alt="">
+                                        <img src="img/directory3.jpg" alt="">
                                     </a>
                                     <div class="img-text">
                                         <span>Closed</span>
@@ -692,7 +615,7 @@
                                 <div class="properties-tittle ml-15 ">
                                     <h3>
                                         <a href="#">Gloria Fast Food Restaurant</a>
-                                        <img src="{{ url_for('static', filename='img/varified.png') }}" alt="">
+                                        <img src="img/varified.png " alt="">
                                     </h3>
                                     <p>
                                         <i class="fas fa-map-marker-alt blue">
@@ -702,7 +625,7 @@
                                 </div>
                                 <div class="properties-footer d-flex">
                                     <div class="restaurant-name">
-                                        <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }} " alt="">
+                                        <img src="img/restaurant-icon.svg" alt="">
                                     </div>
                                     <h3>
                                         <a href="#">Food & Restaurant</a>
@@ -720,7 +643,7 @@
                             <div class="properties-card positon-r">
                                 <div class="properties-img">
                                     <a href="">
-                                        <img src="{{ url_for('static', filename='img/directory2.jpg') }}" alt="">
+                                        <img src="img/directory2.jpg" alt="">
                                     </a>
                                     <div class="img-text">
                                         <span>Closed</span>
@@ -745,7 +668,7 @@
                                 <div class="properties-tittle ml-15 ">
                                     <h3>
                                         <a href="#">Gloria Fast Food Restaurant</a>
-                                        <img src="{{ url_for('static', filename='img/varified.png') }}" alt="">
+                                        <img src="img/varified.png " alt="">
                                     </h3>
                                     <p>
                                         <i class="fas fa-map-marker-alt blue">
@@ -755,7 +678,7 @@
                                 </div>
                                 <div class="properties-footer d-flex">
                                     <div class="restaurant-name">
-                                        <img src="{{ url_for('static', filename='img/restaurant-icon.svg') }} " alt="">
+                                        <img src="img/restaurant-icon.svg" alt="">
                                     </div>
                                     <h3>
                                         <a href="#">Food & Restaurant</a>
@@ -821,7 +744,7 @@
                     <div class="col-4">
                         <div class="single-services text-center mb-35">
                             <div class="services-icon">
-                                <img src="{{ url_for('static', filename='img/services1.svg') }} " alt="">
+                                <img src="img/services1.svg" alt="">
                             </div>
                             <div class="services-cap">
                                 <h5><a href="">Find Businesses</a></h5>
@@ -832,7 +755,7 @@
                     <div class="col-4">
                         <div class="single-services text-center mb-35">
                             <div class="services-icon">
-                                <img src="{{ url_for('static', filename='img/services2.svg') }}" alt="">
+                                <img src="img/services2.svg" alt="">
                             </div>
                             <div class="services-cap">
                                 <h5><a href="">Rewiew Listings</a></h5>
@@ -843,7 +766,7 @@
                     <div class="col-4">
                         <div class="single-services text-center mb-35">
                             <div class="services-icon">
-                                <img src="{{ url_for('static', filename='img/services3.svg') }}" alt="">
+                                <img src="img/services3.svg" alt="">
                             </div>
                             <div class="services-cap">
                                 <h5><a href="">Make a Reservation</a></h5>
@@ -859,9 +782,9 @@
                 <div class="row">
 
                     <div class="video-area positon-r">
-                        <img src="{{ url_for('static', filename='img/video-bg.jpg') }}" alt="">
+                        <img src="img/video-bg.jpg" alt="">
                         <a href="" class="video-icon">
-                            <img src="{{ url_for('static', filename='img/play-butto.svg') }}" alt="">
+                            <img src="img/play-butto.svg" alt="">
                         </a>
                     </div>
 
@@ -872,7 +795,7 @@
                                 <h2>People talking about</h2>
                                 <p class="video-about-text">"Discover; connect with great local businesses in your local neighborhood like dentists, hair stylists and more unde omnis iste natus error sit voluptatem.</p>
                                 <div class="video-about-reivew d-flex align-items-center">
-                                    <img src="{{ url_for('static', filename='img/founder-img.png') }}" alt="">
+                                    <img src="img/founder-img.png" alt="">
                                     <div>
                                         <span>Dan delion</span>
 
@@ -885,7 +808,7 @@
                                 <h2>People talking about</h2>
                                 <p class="video-about-text">"Discover; connect with great local businesses in your local neighborhood like dentists, hair stylists and more unde omnis iste natus error sit voluptatem.</p>
                                 <div class="video-about-reivew d-flex align-items-center">
-                                    <img src="{{ url_for('static', filename='img/founder-img.png') }}" alt="">
+                                    <img src="img/founder-img.png" alt="">
                                     <div>
                                         <span>Dan delion</span>
 
@@ -898,7 +821,7 @@
                                 <h2>People talking about</h2>
                                 <p class="video-about-text">"Discover; connect with great local businesses in your local neighborhood like dentists, hair stylists and more unde omnis iste natus error sit voluptatem.</p>
                                 <div class="video-about-reivew d-flex align-items-center">
-                                    <img src="{{ url_for('static', filename='img/founder-img.png') }}" alt="">
+                                    <img src="img/founder-img.png" alt="">
                                     <div>
                                         <span>Dan delion</span>
 
@@ -932,104 +855,11 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-wrapper">
-            <div class="footer-area">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-4">
-                            <div class="footer-logo mb-35 mt-25">
-                                <a href="#">
-                                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="footer-logo">
-                                </a>
-                            </div>
-                            <div class="footer-tittle">
-                                <p class="footer-tittle-text">Seddo eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Conse <br> ctetur pisicin elit, sed do eiusmod tempor.</p>
-                            </div>
-                            <div class="footer-social">
-                                <a href="">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                            </div>
+    {% endblock %}
 
-                        </div>
-                        <div class="col-2">
-                            <div class="footer-tittle-2">
-                                <h4>Navigation</h4>
-                                <ul>
-                                    <li><a href="">Home</a></li>
-                                    <li><a href="">About</a></li>
-                                    <li><a href="">Services</a></li>
-                                    <li><a href="">Blog</a></li>
-                                    <li><a href="">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-2">
-                            <div class="footer-tittle-3">
-                                <h4>Services</h4>
-                                <ul>
-                                    <li><a href="">Care</a></li>
-                                    <li><a href="">Treatment</a></li>
-                                    <li><a href="">Trainingl</a></li>
-                                    <li><a href="">Hygienic Care</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="footer-tittle-4">
-                                <div class="subscribe">
-                                    <h4>Subscribe newsletter</h4>
-                                    <p>Subscribe our newsletter to get updates about our services and offers.</p>
-                                </div>
-                                <div class="footer-form positon-r mb-15">
-                                    <form action="">
-                                        <input type="email" name="EMAIL" placeholder="Enter your email" class="form-input">
-                                    </form>
-                                    <div class="form-icon">
-                                        <button type="submit">
-                                            <i class="fas fa-arrow-right"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    
 
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom-area text-center ">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="footer-copy-right">
-                                    <p>
-                                        Copyright ©2021 All rights reserved | This template is made with
-                                        <i class="fa fa-heart color-danger" aria-hidden="true"></i>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </footer>
-
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
 
 </body>
 
