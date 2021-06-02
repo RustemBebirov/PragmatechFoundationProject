@@ -1,7 +1,36 @@
+from os import name
 from flask import Flask,render_template
-
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
+db = SQLAlchemy(app)
+
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(20),nullable=False)
+    username = db.Column(db.String(20), unique=True, nullable=False)
+    email = db.Column(db.String(25), unique=True, nullable=False)
+
+    def __repr__(self) -> str:
+        return f"User:{self.username}"
+#Yaratmaq
+# db.create_all()
+# db.session.add(User(name="subhan",username='subhan' ,email="subhan@example.com"))
+# db.session.commit()
+
+
+
+# users = User.query.all()
+# for user in users:
+#     print(user.id,user.name)
+
+
 
 @app.route("/")
 def index():
