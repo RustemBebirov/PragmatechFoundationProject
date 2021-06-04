@@ -64,6 +64,13 @@ class Restaurant(db.Model):
     def __repr__(self) -> str:
         return f"Customer:{self.title}"
 
+class City(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(20),nullable=False)
+    image = db.Column(db.String(20),default='image.png')
+    
+    def __repr__(self) -> str:
+        return f"Customer:{self.title}"
 
 
 
@@ -71,7 +78,8 @@ class Restaurant(db.Model):
 @app.route("/")
 def index():
     restaurants = Restaurant.query.all()
-    return render_template("index.html",restaurants=restaurants)
+    citys = City.query.all()
+    return render_template("index.html",restaurants=restaurants, citys= citys)
 
 @app.route("/about")
 def about():
@@ -131,7 +139,7 @@ def customeredit():
     
 
 
-
+#Restaurant add
 @app.route("/admin/resadd", methods=["GET","POST"])
 def restaurant_add():
     if request.method == "POST":
@@ -154,5 +162,26 @@ def restaurant_edit():
     restaurants = Restaurant.query.all()
     return render_template('admin/resedit.html', restaurants=restaurants)
 
+#city add
+@app.route("/admin/cityadd", methods=["GET","POST"])
+def city_add():
+    if request.method == "POST":
+        file = request.files['file']
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        city = City(
+            title = request.form['title'],
+            image = filename,
+
+        )
+        db.session.add(city)
+        db.session.commit()
+        return redirect(url_for("city_edit"))
+    return render_template("admin/cityadd.html")
+
+@app.route('/admin/cityedit')
+def city_edit():
+    citys = City.query.all()
+    return render_template('admin/cityedit.html', citys=citys)
 if __name__ == "__main__":
     app.run(debug=True)
