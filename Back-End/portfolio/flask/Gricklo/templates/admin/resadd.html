@@ -14,7 +14,14 @@
         <div class="form-group">
             <label for="exampleFormControlFile1">Image</label>
             <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">
-        </div><br><br>
+        </div>
+        <select class ='custom-select' name="city" id="">
+            {% for city in cities%}
+            <option value="1">{{city.title}}</option>
+            {% endfor %}
+        </select>
+        
+        <br><br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </form>
