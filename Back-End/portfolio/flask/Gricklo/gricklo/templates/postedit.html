@@ -42,46 +42,12 @@
           </ul>
         </div>
       </nav>
-
-
-      <h2>User Post</h2>
-  <table class="table table-dark">
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Title</th>
-        <th scope="col">Short Description</th>
-        <th scope="col">Posted</th>
-        <th scope="col">Content</th>
-        <th scope="col">image</th>
-        <th scope="col">author</th>
-        <th scope="col">Update</th>
-        <th scope="col">Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% for user_post in user_posts %}
-        <tr>
-            <th scope="row">{{user_post.id}}</th>
-            <td>{{user_post.title}}</td>
-            <th scope="row">{{user_post.short_description}}</th>
-            <td>{{user_post.blog_posted}}</td>
-            <th scope="row">{{user_post.content}}</th>
-            <td><img src="/static/uploads/{{user_post.image}}" alt=""></td>
-            <td>{{user_post.author}}</td>
-            <td><a href="{{url_for('post_edit', id=user_post.id)}}"><i class="fas fa-edit"></i>Update</a></td>
-            <td><a href="{{url_for('post_delete', id=user_post.id)}}" onclick="return confirm('Are you sure to delete?')"><i class="fas fa-trash-alt"></i>Delete</a></td>
-          </tr>
-        {% endfor %}
+    
       
-    </tbody>
-  </table>   
-    
-    
-    <div class="container mt-10">
+    <div class="container mt-20">
           <div class="row">
               <div class="col-sm">
-                <h2>Share Post</h2>
+                <h2>Post Edit</h2>
                 <form action="" method="post" enctype="multipart/form-data">
                     {{ form.csrf_token() }}
                     <div class="form-group">
