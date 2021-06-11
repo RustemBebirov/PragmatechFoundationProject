@@ -42,7 +42,7 @@
                                     <p>{{blog.short_description}}</p>
                                     <a href="{{url_for('blogdetails', id=blog.id)}}" style="margin-bottom: 20px;font-size: 25px;">Read More</a>
                                     <ul class="blog-info-link">
-                                        <li><a href="#"><i class="fa fa-user"></i>{{blog.category}}</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i>{{blog.categories.title}}</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                     </ul>
                                 </div>
@@ -92,64 +92,24 @@
                             <div class="side-category">
                                 <h2 class="mb-35">Category</h2>
                                 <ul>
-                                    <li><a href="">Restaurant Food</a></li>
-                                    <li>
-                                        <a href="">Travel News</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Modern technology</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Product</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Inspiration</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Health Care</a>
-                                    </li>
+                                    {% for category in categories %}
+                                    <li><a href="">{{category.title}}</a></li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                             <div class="side-post">
                                 <h2>Recent Post</h2>
+                                {%for post in posts%}
                                 <div class="side-post-body">
                                     <div class="side-post-img">
-                                        <img src="img/post_1.jpg" alt="post_1">
+                                        <img src="/static/uploads/{{post.image}}" alt="post_1">
                                     </div>
                                     <div class="side-post-text">
-                                        <a href="">From life wish you fish...</a>
-                                        <p>January 12, 2019</p>
+                                        <a href="">{{post.title}}</a>
+                                        <p>{{post.blog_posted}}</p>
                                     </div>
                                 </div>
-                                <div class="side-post-body">
-                                    <div class="side-post-img">
-                                        <img src="img/post_2.jpg" alt="post_1">
-                                    </div>
-                                    <div class="side-post-text">
-                                        <a href="">From life wish you fish...</a>
-                                        <p>January 12, 2019</p>
-                                    </div>
-                                </div>
-                                <div class="side-post-body">
-                                    <div class="side-post-img">
-                                        <img src="img/post_3.jpg" alt="post_1">
-                                    </div>
-                                    <div class="side-post-text">
-                                        <a href="">From life wish you fish...</a>
-                                        <p>January 12, 2019</p>
-                                    </div>
-                                </div>
-                                <div class="side-post-body">
-                                    <div class="side-post-img">
-                                        <img src="img/post_4.jpg" alt="post_1">
-                                    </div>
-                                    <div class="side-post-text">
-                                        <a href="">From life wish you fish...</a>
-                                        <p>January 12, 2019</p>
-                                    </div>
-                                </div>
-
-
+                                {% endfor %}
 
 
                             </div>

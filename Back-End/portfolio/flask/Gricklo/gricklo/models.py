@@ -17,10 +17,10 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(25), unique=True, nullable=False)
     phone = db.Column(db.String(25), unique=True, nullable=False)
     image = db.Column(db.String(20),default='image.png')
-    orders = db.relationship('Order',backref='order',lazy=True, cascade="all,delete")
-    comments =db.relationship('Comment',backref='comment',lazy=True, cascade="all,delete")
-    blogs = db.relationship('Blog',backref='blog',lazy=True, cascade="all,delete")
-    posts = db.relationship('UserPost',backref='blog',lazy=True, cascade="all,delete")
+    orders = db.relationship('Order',backref='owners',lazy=True, cascade="all,delete")
+    comments =db.relationship('Comment',backref='comments',lazy=True, cascade="all,delete")
+    blogs = db.relationship('Blog',backref='blogs',lazy=True, cascade="all,delete")
+    user_post = db.relationship('UserPost',backref='users',lazy=True, cascade="all,delete")
     
     def __repr__(self) -> str:
         return f"User:{self.username}"
@@ -33,7 +33,7 @@ class UserPost(db.Model, UserMixin):
     blog_posted = db.Column(db.DateTime, default=datetime.utcnow)
     content = db.Column(db.String(50),nullable=False)
     image = db.Column(db.String(20), default = "default.png")
-    author =db.Column(db.Integer, db.ForeignKey("user.id"))
+    customer =db.Column(db.Integer, db.ForeignKey("user.id"),nullable=False)
 
     def __repr__(self) -> str:
         return f"UserPost:{self.title}"
@@ -67,7 +67,7 @@ class BlogCategory(db.Model):
     __tablename__ = "blogcategory"
     id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(50),nullable = False)
-    blog =db.relationship('Blog', backref='blogs',lazy=True)
+    blog =db.relationship('Blog', backref='categories',lazy=True)
     def __repr__(self) -> str:
         return f"Blog Category:{self.title}"
 
@@ -75,7 +75,7 @@ class Category(db.Model):
     __tablename__ = "category"
     id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(50),nullable = False)
-    order = db.relationship("Order", backref='orders',lazy=True )
+    order = db.relationship("Order", backref='categories',lazy=True )
     def __repr__(self) -> str:
         return f"Category:{self.title}"
 
@@ -99,7 +99,7 @@ class Restaurant(db.Model):
     title = db.Column(db.String(20),nullable=False)
     location = db.Column(db.String(50), nullable=False)
     image = db.Column(db.String(20),default='image.png')
-    city = db.Column(db.Integer,db.ForeignKey('city.title'),nullable=False)
+    city = db.Column(db.Integer,db.ForeignKey('city.id'),nullable=False)
     def __repr__(self) -> str:
         return f"Restaurant:{self.title}"
 
@@ -108,6 +108,6 @@ class City(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(20),nullable=False,unique=True)
     image = db.Column(db.String(20),default='image.png')
-    restaurant =db.relationship(Restaurant, backref='restaurant',lazy=True ,cascade="all,delete")
+    restaurant =db.relationship(Restaurant, backref='cities',lazy=True ,cascade="all,delete")
     def __repr__(self) -> str:
         return f"City:{self.title}"

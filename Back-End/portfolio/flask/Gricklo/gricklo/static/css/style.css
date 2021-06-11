@@ -226,10 +226,10 @@ img {
     }
     /*header*/
     .header-area .col-9 {
-        width: 50%;
+        width: 30%;
     }
     .header-area .col-3 {
-        width: 50%;
+        width: 70%;
     }
     .logo img {
         width: 75%;

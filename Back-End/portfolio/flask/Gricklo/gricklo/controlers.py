@@ -20,13 +20,17 @@ def about():
 
 @app.route("/blog")
 def blog():
+    categories=BlogCategory.query.all()
+    posts = UserPost.query.all()
     blogs=Blog.query.all()
-    return render_template("blog.html" , blogs=blogs)
+    return render_template("blog.html" , blogs=blogs , categories=categories, posts= posts)
 
 @app.route("/blogdetails/<int:id>")
 def blogdetails(id):
+    categories=BlogCategory.query.all()
+    posts = UserPost.query.all()
     blog=Blog.query.get_or_404(id)
-    return render_template("blogdetails.html" , blog= blog)
+    return render_template("blogdetails.html" , blog= blog, categories=categories, posts=posts)
 
 @app.route("/contact")
 def contact():
@@ -78,7 +82,7 @@ def signup():
 @app.route("/account", methods=["GET","POST"])
 @login_required
 def account():
-    user_posts = UserPost.query.all()
+    user_posts = UserPost.query.filter_by(customer=current_user.username)
     form = UserPostForm()
     if form.validate_on_submit():
         user_post=UserPost(
@@ -86,7 +90,7 @@ def account():
             short_description = form.short_description.data,
             content = form.content.data,
             image = save_picture(form.image.data),
-            author = current_user.username,
+            customer = current_user.username,
         )
         db.session.add(user_post)
         db.session.commit()
@@ -123,6 +127,7 @@ def logout():
 
 #Admin
 @app.route("/admin")
+@login_required
 def dashboard():
     return render_template("admin/admin.html")
 
