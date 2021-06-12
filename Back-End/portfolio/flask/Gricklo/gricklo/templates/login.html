@@ -19,8 +19,8 @@
                     <form action="" method="POST" enctype="multipart/form-data" >
                         {{ form.csrf_token() }}
                         <div class="form-group">
-                            {{form.username.label(class=" text-info h3")}}
-                            {{form.username(class='form-control')}}
+                            {{form.email.label(class=" text-info h3")}}
+                            {{form.email(class='form-control')}}
                         </div>
                         
                         <div class="form-group">
@@ -31,6 +31,7 @@
                         <div class="form-group ">
                             
                             {{form.submit(class='btn btn-info float-right')}}
+                            
                             <p>Don’t have an account? <a href="{{url_for('signup')}}">Sign Up</a> here</p>
                         </div>
                         

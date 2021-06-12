@@ -5,20 +5,18 @@ from gricklo.models import User
 
 class RegistrationForm(FlaskForm):
     name = StringField("Full Name", validators=[DataRequired(),Length(min=3, max=30)])
-    username = StringField("Username", validators=[DataRequired(),Length(min=3, max=30)])
     email = StringField("Email",validators=[DataRequired(),Email()])
-    password = PasswordField("Password", validators=[DataRequired(),Length(min=6, max=20)])
+    password = PasswordField("Password", validators=[DataRequired(),Length(min=5, max=20)])
     confirm = PasswordField("Password Confirm", validators=[DataRequired(),EqualTo('password')])
-    phone = StringField("Phone", validators=[DataRequired(),Length(min=9,max=20)])
     image = FileField("Image")
     submit = SubmitField("Register")
 
-    
 
 
-class LoginForm(FlaskForm):
-    username = username = StringField("Username", validators=[DataRequired(),Length(min=3, max=30)])
-    password = PasswordField("Password", validators=[DataRequired(),Length(min=6, max=20)])
+
+class LoginForm(FlaskForm): 
+    email = StringField("Email", validators=[DataRequired()])
+    password = PasswordField("Password", validators=[DataRequired()])
     submit = SubmitField("Login")
 
 class UserPostForm(FlaskForm):
@@ -27,6 +25,12 @@ class UserPostForm(FlaskForm):
     content= TextAreaField("Content", validators=[DataRequired()])
     image = FileField("Image")
     submit = SubmitField("Share Post")
+
+
+class Comment(FlaskForm):
+    title = StringField("Title", validators=[DataRequired()])
+    content= TextAreaField("Comment", validators=[DataRequired()])
+    submit = SubmitField("Share Comment")
 
 
 

@@ -38,13 +38,14 @@ def contact():
 
 @app.route("/listing")
 def listing():
-    return render_template("listing.html")
+    restaurants = Restaurant().query.all()
+    return render_template("listing.html" , restaurants= restaurants)
 
 @app.route("/login", methods=["GET","POST"])
 def login():
     form = LoginForm()
     if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
+        user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password,form.password.data):
             login_user(user)
             
@@ -66,10 +67,8 @@ def signup():
         parol_hashed = bcrypt.generate_password_hash(user_password).decode("utf-8")
         user = User(
             name = form.name.data,
-            username = form.username.data,
             email = form.email.data,
             password = parol_hashed,
-            phone = form.phone.data,
             image = save_picture(form.image.data)
 
         )
@@ -82,7 +81,7 @@ def signup():
 @app.route("/account", methods=["GET","POST"])
 @login_required
 def account():
-    user_posts = UserPost.query.filter_by(customer=current_user.username)
+    user_posts = UserPost.query.filter_by(user=current_user.name)
     form = UserPostForm()
     if form.validate_on_submit():
         user_post=UserPost(
@@ -90,7 +89,7 @@ def account():
             short_description = form.short_description.data,
             content = form.content.data,
             image = save_picture(form.image.data),
-            customer = current_user.username,
+            user = current_user.name,
         )
         db.session.add(user_post)
         db.session.commit()
@@ -129,6 +128,7 @@ def logout():
 @app.route("/admin")
 @login_required
 def dashboard():
+    
     return render_template("admin/admin.html")
 
 
@@ -150,6 +150,8 @@ def restaurant_add():
         restaurant = Restaurant(
             title = request.form['title'],
             location = request.form['location'],
+            status = request.form['status'],
+            phone=request.form['phone'],
             image = filename,
             city = request.form['city']
 
@@ -176,6 +178,8 @@ def restaurant_edit(id):
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         restaurants.title= request.form['title']
         restaurants.location = request.form['location']
+        restaurants.status = request.form['status']
+        restaurants.phone = request.form['phone']
         restaurants.image = filename
         restaurants.city = request.form['city']
         db.session.commit()
@@ -250,8 +254,6 @@ def blog_add():
             description = request.form['description'],
             image = filename,
             category = request.form['category'],
-            customer = request.form['customer']
-
 
         )
         db.session.add(blog)
@@ -280,7 +282,6 @@ def blog_edit(id):
         blogs.description = request.form['description']
         blogs.image = filename
         blogs.category = request.form['category']
-        blogs.customer = request.form['customer']
         db.session.commit()
         return redirect(url_for("blog_list"))
 

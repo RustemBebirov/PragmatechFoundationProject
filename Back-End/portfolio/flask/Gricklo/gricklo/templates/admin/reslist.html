@@ -8,6 +8,8 @@
         <th scope="col">ID</th>
         <th scope="col">TITLE</th>
         <th scope="col">LOCATION</th>
+        <th scope="col">STATUS</th>
+        <th scope="col">PHONE</th>
         <th scope="col">CITY</th>
         <th scope="col">IMAGE</th>
         <th scope="col">Update</th>
@@ -20,6 +22,8 @@
             <th scope="row">{{restourant.id}}</th>
             <td>{{restourant.title}}</td>
             <td>{{restourant.location}}</td>
+            <td>{{restourant.status}}</td>
+            <td>{{restourant.phone}}</td>
             <td>{{restourant.cities.title}}</td>
             <td><img src="/static/uploads/{{restourant.image}}" alt=""></td>
             <td><a href="{{url_for('restaurant_edit', id=restourant.id)}}"><i class="fas fa-edit"></i>Update</a></td>
