@@ -987,7 +987,7 @@ img {
 }
 
 .slider-block-2 {
-    width: 1240px !important;
+    width: 1300px !important;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
@@ -1002,7 +1002,7 @@ img {
 }
 
 .video-about {
-    min-width: fit-content;
+    min-width: 650px;
     margin-right: 20px;
 }
 

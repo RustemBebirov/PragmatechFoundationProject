@@ -14,7 +14,7 @@ class User(db.Model, UserMixin):
     name = db.Column(db.String(20),nullable=False)
     email = db.Column(db.String(25), unique=True, nullable=False)
     password = db.Column(db.String(25), unique=True, nullable=False)
-    image = db.Column(db.String(20),default='/static/uploads/user.png')
+    image = db.Column(db.String(20),default='static/uploads/user.png')
     orders = db.relationship('Order',backref='owners',lazy=True, cascade="all,delete")
     comments =db.relationship('Comment',backref='authors',lazy=True, cascade="all,delete")
     user_post = db.relationship('UserPost',backref='users',lazy=True, cascade="all,delete")
@@ -29,7 +29,7 @@ class UserPost(db.Model, UserMixin):
     short_description = db.Column(db.String(50),nullable=False)
     blog_posted = db.Column(db.DateTime, default=datetime.utcnow)
     content = db.Column(db.String(50),nullable=False)
-    image = db.Column(db.String(20), default = "default.png")
+    image = db.Column(db.String(20), default = "static/uploads/post.png")
     user =db.Column(db.Integer, db.ForeignKey("user.id"),nullable=False)
 
     def __repr__(self) -> str:
@@ -37,17 +37,30 @@ class UserPost(db.Model, UserMixin):
 
 
 
-class Comment(db.Model):
+class Comment(db.Model, UserMixin):
     __tablename__ = "comment"
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(20),nullable=False)
     author = db.Column(db.Integer,db.ForeignKey("user.id"),nullable=False)
-    description = db.Column(db.Text,nullable=False)
+    email = db.Column(db.String(50),nullable=False)
+    comment = db.Column(db.Text,nullable=False)
     comment_posted=db.Column(db.DateTime,default=datetime.utcnow)
     blogs = db.Column(db.Integer,db.ForeignKey("blog.id"),nullable=False)
+    image = db.Column(db.String(20), default = "static/uploads/comment.png")
+    reply = db.relationship('Comment_reply',backref='comment_reply',lazy=True, cascade="all,delete")
     
     def __repr__(self) -> str:
         return f"Comment:{self.title}"
+
+class Comment_reply(db.Model, UserMixin):
+    __tablename__ = "commentreply"
+    id = db.Column(db.Integer, primary_key=True)
+    author = db.Column(db.Integer,db.ForeignKey("user.id"),nullable=False)
+    email = db.Column(db.String(50),nullable=False)
+    comment = db.Column(db.Text,nullable=False)
+    comment_posted=db.Column(db.DateTime,default=datetime.utcnow)
+    comment_id = db.Column(db.Integer,db.ForeignKey("comment.id"),nullable=False)
+    image = db.Column(db.String(20), default = "static/uploads/comment.png")
+
 
 class Blog(db.Model):
     __tablename__ = "blog"

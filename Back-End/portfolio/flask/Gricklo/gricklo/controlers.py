@@ -25,12 +25,23 @@ def blog():
     blogs=Blog.query.all()
     return render_template("blog.html" , blogs=blogs , categories=categories, posts= posts)
 
-@app.route("/blogdetails/<int:id>")
+@app.route("/blogdetails/<int:id>", methods=["GET","POST"])
 def blogdetails(id):
     categories=BlogCategory.query.all()
     posts = UserPost.query.all()
     blog=Blog.query.get_or_404(id)
-    return render_template("blogdetails.html" , blog= blog, categories=categories, posts=posts)
+    comments = Comment.query.filter_by(blogs=id)
+    if request.method == "POST":
+        comment = Comment(
+            author = request.form['author'],
+            email = request.form['email'],
+            comment = request.form['comment'],
+            blogs = blog.id
+        )
+        db.session.add(comment)
+        db.session.commit()
+        return redirect(url_for('blogdetails', id=blog.id))
+    return render_template("blogdetails.html" , blog= blog, categories=categories, posts=posts,comments = comments)
 
 @app.route("/contact")
 def contact():
